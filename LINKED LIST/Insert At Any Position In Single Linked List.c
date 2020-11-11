@@ -58,6 +58,17 @@ void insert_at_N_position(struct node*head1, struct node*temp1)
 	tempo = (struct node*) malloc (sizeof(struct node));
 	printf("Enter the data:");
 	scanf("%d",&tempo->data);
+	if(pos == 0)
+	{
+		printf("After Insertion, the List is:\n");
+		while(temp1!=NULL)
+		{
+			printf("%d\t",temp1->data);
+			temp1 = temp1->ptr;
+		}
+		printf("\nSORRY!!! NO ADDITIONAL NODE IS INSERTED :(");
+		return;
+	}
 	if(pos == 1)
 	{
 		tempo->ptr = temp1;
